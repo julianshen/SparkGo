@@ -25,10 +25,10 @@ const (
 )
 
 func (core *SparkCore)post(command string, params string) (*TinkerResult, error) {
-    api_url := END_POINT_URL + core.device_id + "/" + command
+    api_url := END_POINT_URL + core.Device_id + "/" + command
 
     values := make(url.Values)
-    values.Set("access_token", core.access_token)
+    values.Set("access_token", core.Access_token)
     values.Set("params", params)
 
     r, err := http.PostForm(api_url, values);
