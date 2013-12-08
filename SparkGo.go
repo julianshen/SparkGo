@@ -9,8 +9,8 @@ import (
 )
 
 type SparkCore struct {
-    access_token string
-    device_id string
+    Access_token string
+    Device_id string
 }
 
 type TinkerResult struct {
