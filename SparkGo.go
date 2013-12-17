@@ -102,3 +102,13 @@ func (core *SparkCore) AnalogRead(pin string) (int, error) {
 
     return r.ReturnVal, nil
 }
+
+func (core *SparkCore) Cmd(cmd string, params string) (int, error) {
+    r, err := core.post(cmd, params)
+
+    if err != nil {
+        return -1, err
+    }
+
+    return r.ReturnVal, nil
+}
